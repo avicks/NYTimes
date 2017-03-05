@@ -1,12 +1,1 @@
-Hello,
-
-Launching and testing the app should only require you to open
-the NYTimes.xcworkspace file.
-
-If there are any issues, please do not hesitate to contact me
-at:
-
- a.vickers2@gmail.com
-
-Thanks!
-Alex
+This app requires CocoaPods.  Please make sure you install and run pod install before attempting to run the app.
