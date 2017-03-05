@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="11542" systemVersion="15G1108" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+    <entity name="Book" representedClassName=".Book" syncable="YES">
+        <attribute name="amazonURL" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="author" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="bookDescription" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="bookReviewURL" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="isbn13" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="lastModified" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="rank" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="title" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="weeksOnList" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <relationship name="list" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="List" inverseName="books" inverseEntity="List" syncable="YES"/>
+    </entity>
+    <entity name="List" representedClassName=".List" syncable="YES">
+        <attribute name="displayName" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="lastModified" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="listNameEncoded" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="books" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Book" inverseName="list" inverseEntity="Book" syncable="YES"/>
+    </entity>
+    <elements>
+        <element name="Book" positionX="-54" positionY="9" width="128" height="193"/>
+        <element name="List" positionX="-344" positionY="27" width="128" height="105"/>
+    </elements>
+</model>
